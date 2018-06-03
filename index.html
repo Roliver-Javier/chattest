@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>Page Title</title>
+    <script src = "/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+
+<script type="text/javascript">
+   
+    var socket = io();
+    $(document).ready(function(){
+        socket.on('connectToRoom', function(data){
+            $("#dashboard").text(data);
+        });         
+    });
+   
+</script>
+<body>
+    <div class="container">
+
+        <!-- CHAT BOARDER -->
+        <div class="col-md-8 col-md-push-4 dashboard-content">
+            <div class="chat-contact">
+                <div class="unit">
+                        <div class="field name">
+                            <div>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="image" class="avatar"> 
+                                Chat with Gerard Butler
+                            </div>
+                            <div class="lab">
+                                <span class="lab-success point">.</span>Online
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 box-write">
+                <textarea  class="input-text"></textarea>
+                <br/>
+                <button class="btn-send">Send</button>
+            </div>
+        </div>
+
+        <!-- CONTACT LIST-->
+        <div class="col-md-4 col-md-pull-8 contact-content">
+            <div class="bootstrap snippets">
+                <div class="row decor-default">
+                    <div class="contacts-list">
+                        <div class="unit">
+                            <div class="field name">
+                                <div>
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="image" class="avatar"> Alexander Verdnam
+                                </div>
+                               <div class="lab">
+                                   <span class="lab-success point">.</span>Online
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="unit">
+                            <div class="field name">
+                                <div>
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="image" class="avatar"> Gerard Butler
+                                </div>
+                                <div class="lab">
+                                    <span class="lab-success point">.</span>Online
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="unit">
+                            <div class="field name">
+                                <div>
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="image" class="avatar"> Anna Lee
+                                </div>
+                                <div class="lab">
+                                    <span class="lab-success point">.</span>Online
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <span class="text-muted">@author: Roliver Javier Rodriguez.</span>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+
+</html>

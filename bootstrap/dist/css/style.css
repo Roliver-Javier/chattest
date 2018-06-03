@@ -1,0 +1,186 @@
+body{
+    padding:5%;
+}
+.container{
+    padding:0px;
+}
+.contact-content{
+    background-color:#5B5B5B;
+    border:1px solid black;
+    border-top-left-radius: 10px;
+    height:100%;
+    
+}
+.dashboard-content{
+    background-color:rgb(238, 238, 238);
+    padding:0;
+    margin:0;
+    height:100%;
+
+}
+.chat-contact{
+    background-color:#E6E9EC;
+    padding-left:25px;
+}
+.chat-contact .unit.head {
+    font-size: 20px;
+    color: #7266ba;
+    padding-bottom: 10px;
+}
+.chat-contact .unit {
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333333;
+    -webkit-transition: background false false, 0.3s false false;
+    -moz-transition: background false false false, 0.3s false false false;
+    -o-transition: background false false false, 0.3s false false false;
+    transition: background, 0.3s;
+}
+.chat-contact .unit .field {
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.chat-contact .unit .name {
+    color:#333333;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    top:10px;
+}
+
+.chat-contact .unit .name .avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0 16px 0 0;
+    vertical-align: top;
+}
+.chat-contact span.point{
+    font-weight: bold;
+    font-size:4em;
+}
+.chat-contact .lab {
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 75px;
+    color: #adacac;
+    left: 75px;
+    bottom:35px;
+    position:relative;
+}
+
+.chat-contact .lab-success {
+    color: #46be8a;
+}
+
+
+
+/************ Contact list*********************/
+.contacts-list{
+    padding:10%;
+    overflow-y:auto;
+    height:90%;
+}
+.contacts-list .unit.head {
+    font-size: 20px;
+    color: #7266ba;
+    padding-bottom: 10px;
+    overflow: visible;
+}
+.contacts-list .unit {
+    margin-top: -7px;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333333;
+    -webkit-transition: background false false, 0.3s false false;
+    -moz-transition: background false false false, 0.3s false false false;
+    -o-transition: background false false false, 0.3s false false false;
+    transition: background, 0.3s;
+}
+.contacts-list .unit .field {
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.contacts-list .unit .name {
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.contacts-list .unit .name .avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0 16px 0 0;
+    vertical-align: top;
+}
+
+.contacts-list span.point{
+    font-weight: bold;
+    font-size:4em;
+}
+.contacts-list .lab {
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 75px;
+    color: #adacac;
+    left: 75px;
+    bottom:35px;
+    position:relative;
+}
+
+.contacts-list .lab-success {
+    color: #46be8a;
+}
+
+
+.box-write{
+    position: absolute;;
+    bottom:0;
+    height:170px;
+    padding:10px;
+    background-color:#E6E9EC;
+    margin: 0 auto;
+    text-align:center;
+}                
+
+.box-write .input-text{
+    margin-top:10px;
+    height:100px;
+    width:90%;
+    border:1px solid #EDEEF0;
+    padding:3%;
+    font-size:14px;
+    font-family: sans-serif;
+}
+
+.box-write .btn-send{
+    background:0px;
+    color:#78c4e2;
+    border:0px;
+    font-size:14px;
+    font-weight: bold;
+    position:relative;
+    float:right;
+    right:50px;
+    top:10px;
+}
+
+.footer {
+    margin:0 auto;
+    text-align:center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
