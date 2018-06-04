@@ -12,6 +12,32 @@
    
     var socket = io();
     $(document).ready(function(){
+        var username='';
+        $("#username").focus();
+        $(".input-text").prop('disabled', true);
+        
+        $("#username").focusout(function(){
+            if($("#username").val().length > 1){
+                username = $("#username").val();
+                $(".input-text").focus();
+                $(".input-text").prop('disabled', false);
+            }
+        });
+        
+
+        $(".input-text").keypress(function(){
+            socket.emit('typing',username);
+        });
+
+        socket.on('typing', function(data){
+            $("#typing-text").text(data+" is typing a message");
+        });
+
+        $("#btn-send").click(function(){
+            var message = $(".input-text").val();
+            
+        });
+
         socket.on('connectToRoom', function(data){
             $("#dashboard").text(data);
         });         
@@ -36,11 +62,12 @@
                         </div>
                 </div>
             </div>
-
+            <small id="typing-text"></small>
             <div class="col-md-12 box-write">
+                <input type="text" id="username" placeholder="Enter your username"/>
                 <textarea  class="input-text"></textarea>
                 <br/>
-                <button class="btn-send">Send</button>
+                <button id="btn-send">Send</button>
             </div>
         </div>
 

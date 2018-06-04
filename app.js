@@ -13,8 +13,13 @@ app.get('/', function(req, res) {
 });
 
 var roomno=1;
-//Whenever someone connects this gets executed
+
 io.on('connection', function(socket) {
+    
+    socket.on('typing',function(data){
+        socket.broadcast.emit('typing',data);
+    });
+
     var room = io.nsps['/'].adapter.rooms['room-'+roomno];
     if( room && room.length > 1) roomno++;
 
